@@ -19,11 +19,21 @@ function excludedStatus(entry){
   };
 
 
-//Given a location,
-function emailCoordinators(){
+function emailCoordinatorsTest(){
   const areaKeys = Object.keys(areaMessages)
   for (const area of areaKeys){
     console.log("EMAIL TARGET", emailDict[area])
     console.log(areaMessages[area])
+  }
+};
+
+
+function emailCoordinators(){
+  const areaKeys = Object.keys(areaMessages)
+  for (const area of areaKeys){
+    var recipient = emailDict[area]
+    var subject = "[AUTO] Vacancy Sheet Reminders"
+    var body = areaMessages[area]
+    GmailApp.sendEmail(recipient, subject, body)
   }
 };
