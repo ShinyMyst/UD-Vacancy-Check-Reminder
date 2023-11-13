@@ -1,6 +1,11 @@
+// Tweak find_area function so that this dict can be empty
 var areaMessages = {
-    "SQAC": '',
-    "Founders": ''
+  "SQAC": '',
+  "Founders": "",
+  'VWK': "",
+  'Stuart': "",
+  'Marianist': "",
+  'Marycrest': ""
 };
 
 function msgStaffWelcome(entry){
