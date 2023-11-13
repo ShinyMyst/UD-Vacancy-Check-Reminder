@@ -17,4 +17,14 @@ function getColumn(headerString){
         const cellIndex = topRow.indexOf(headerString);
         return entry[cellIndex]
   };
-  
+
+function formatDate(inputDate){
+  // Removes the time/year from the date.
+  var date = new Date(inputDate)
+  var formattedDate = date.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric'
+  });
+  return formattedDate;
+};

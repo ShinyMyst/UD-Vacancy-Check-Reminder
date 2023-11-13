@@ -1,5 +1,5 @@
 // Sheet Information
-const SHEET_ID = "x"
+const SHEET_ID = "z-VGuHOlJo"
 const PAGE_NAME = "Fall 2023"
 
 // Relevant Headers
@@ -21,10 +21,13 @@ const areaDict = {
     'CS': 'SQAC',
     'CW': 'SQAC',
     'AC': 'SQAC',
+    '1710 Frericks Way': 'SQAC',
+    '339 Irving': 'SQAC',
+    '314 Lowes': 'SQAC',
     'FD': 'Founders'
   };
   
 const emailDict = {
-"SQAC": "fake SQAC email",
-"Founders": "fake Founders email"
+"SQAC": "z@z.edu",
+"Founders": "z@z.edu"
 };

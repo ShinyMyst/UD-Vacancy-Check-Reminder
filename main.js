@@ -19,8 +19,9 @@ function excludedStatus(entry){
   };
 
 
-function emailCoordinatorsTest(){
+function test_emailCoordinators(){
   const areaKeys = Object.keys(areaMessages)
+  console.log(areaMessages)
   for (const area of areaKeys){
     console.log("EMAIL TARGET", emailDict[area])
     console.log(areaMessages[area])
