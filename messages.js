@@ -1,12 +1,5 @@
 // Tweak find_area function so that this dict can be empty
-var areaMessages = {
-  "SQAC": '',
-  "Founders": "",
-  'VWK': "",
-  'Stuart': "",
-  'Marianist': "",
-  'Marycrest': ""
-};
+var areaMessages = {};
 
 function msgStaffWelcome(entry){
   // If Staff Welcome not checked, stores a message for associated area.
@@ -39,8 +32,9 @@ function _storeMessage(locationData, message){
   // Stores message in areaMessages dict with area as key.
   var area = _findArea(locationData)
   if (area){
-      areaMessages[area] += message + "\n"
-  };
+    areaMessages[area] = areaMessages[area] || ''; // Assign an empty string if areaMessages[area] is falsy
+    areaMessages[area] += message + "\n";
+  }
 };
 
 function _findArea(locationData){
