@@ -35,6 +35,8 @@ function emailCoordinators(){
     var recipient = emailDict[area]
     var subject = "[AUTO] Vacancy Sheet Reminders"
     var body = areaMessages[area]
-    GmailApp.sendEmail(recipient, subject, body)
+    if (recipient){
+      GmailApp.sendEmail(recipient, subject, body)
+    }
   }
 };
